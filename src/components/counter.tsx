@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { CounterProps } from '../types/counter';
 
-function counter() {
-  const [counter, setCounter] = useState(0);
-
+function counter(props: CounterProps) {
+  const [counter, setCounter] = useState<number>(props.initialValue);
   return (
     <div
       style={{
@@ -45,7 +45,7 @@ function counter() {
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             transition: 'background-color 0.3s ease'
           }}
-          onClick={() => setCounter(counter + 1)}
+          onClick={() => setCounter(counter + props.step)}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = '#45a049')
           }
@@ -68,7 +68,7 @@ function counter() {
             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
             transition: 'background-color 0.3s ease'
           }}
-          onClick={() => setCounter(counter - 1)}
+          onClick={() => setCounter(counter - props.step)}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = '#d32f2f')
           }

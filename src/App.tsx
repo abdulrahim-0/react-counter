@@ -4,7 +4,7 @@ import './App.css';
 import Counter from './components/counter';
 function App() {
   return (
-    <Counter />
+    <Counter initialValue={0} step={1} />
   );
 }
 
