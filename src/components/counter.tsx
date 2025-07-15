@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CounterProps } from '../types/counter';
-
+import NumberFact from './NumberFact';
 function counter(props: CounterProps) {
   const [counter, setCounter] = useState<number>(props.initialValue);
   return (
@@ -79,6 +79,7 @@ function counter(props: CounterProps) {
           Decrement
         </button>
       </div>
+      <NumberFact value={counter} />
     </div>
   );
 }
