@@ -24,18 +24,18 @@ function NumberFact({ value }: Props) {
   return (
     <div
       style={{
-        background: '#f9f9fb',
+        background: '#23272f',
         borderRadius: '8px',
         padding: '16px',
         marginTop: '16px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
         maxWidth: '400px',
       }}
     >
       <p
         style={{
           fontStyle: 'italic',
-          color: '#444',
+          color: '#e0e0e0',
           fontSize: '1.1rem',
           margin: 0,
           letterSpacing: '0.01em',

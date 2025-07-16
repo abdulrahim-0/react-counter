@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CounterProps } from '../types/counter';
 import NumberFact from './NumberFact';
+
 function counter(props: CounterProps) {
   const [counter, setCounter] = useState<number>(props.initialValue);
   return (
@@ -11,22 +12,23 @@ function counter(props: CounterProps) {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#f0f4f8',
-        fontFamily: 'Arial, sans-serif'
+        backgroundColor: '#181a1b',
+        fontFamily: 'Arial, sans-serif',
+        color: '#f5f6fa'
       }}
     >
-      <h1 style={{ fontSize: '2.5rem', color: '#333', marginBottom: '20px' }}>
+      <h1 style={{ fontSize: '2.5rem', color: '#f5f6fa', marginBottom: '20px' }}>
         Counter App
       </h1>
       <div
         style={{
           fontSize: '2rem',
-          color: '#555',
+          color: '#e1e1e6',
           marginBottom: '30px',
           padding: '10px 20px',
-          backgroundColor: '#fff',
+          backgroundColor: '#23272f',
           borderRadius: '8px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+          boxShadow: '0 4px 12px rgba(0,0,0,0.5)'
         }}
       >
         {counter}
@@ -40,17 +42,17 @@ function counter(props: CounterProps) {
             margin: '10px',
             border: 'none',
             borderRadius: '5px',
-            backgroundColor: '#4CAF50',
-            color: 'white',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            backgroundColor: '#2563eb',
+            color: '#f5f6fa',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
             transition: 'background-color 0.3s ease'
           }}
           onClick={() => setCounter(counter + props.step)}
           onMouseOver={(e) =>
-            (e.currentTarget.style.backgroundColor = '#45a049')
+            (e.currentTarget.style.backgroundColor = '#1e40af')
           }
           onMouseOut={(e) =>
-            (e.currentTarget.style.backgroundColor = '#4CAF50')
+            (e.currentTarget.style.backgroundColor = '#2563eb')
           }
         >
           Increment
@@ -63,17 +65,17 @@ function counter(props: CounterProps) {
             margin: '10px',
             border: 'none',
             borderRadius: '5px',
-            backgroundColor: '#f44336',
-            color: 'white',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            backgroundColor: '#dc2626',
+            color: '#f5f6fa',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
             transition: 'background-color 0.3s ease'
           }}
           onClick={() => setCounter(counter - props.step)}
           onMouseOver={(e) =>
-            (e.currentTarget.style.backgroundColor = '#d32f2f')
+            (e.currentTarget.style.backgroundColor = '#991b1b')
           }
           onMouseOut={(e) =>
-            (e.currentTarget.style.backgroundColor = '#f44336')
+            (e.currentTarget.style.backgroundColor = '#dc2626')
           }
         >
           Decrement
