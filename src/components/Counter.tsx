@@ -19,12 +19,17 @@ function Counter({ initialValue, step }: CounterProps): JSX.Element {
       style={{ minHeight: '100vh', background: '#181A1B' }} // fill full screen height
     >
       <Grid size={12} style={{ textAlign: 'center' }}>
-        <Typography variant="h4" style={{ textAlign: 'center' , color: '#FFFFFF' }}>
+        <Typography
+          variant="h4"
+          style={{ textAlign: 'center', color: '#FFFFFF' }}
+        >
           Counter App
         </Typography>
       </Grid>
       <Grid size={12} style={{ textAlign: 'center' }}>
-        <Typography variant="h2" style={{ color: '#FFFFFF' }}>{counter}</Typography>
+        <Typography variant="h2" style={{ color: '#FFFFFF' }}>
+          {counter}
+        </Typography>
       </Grid>
       <Grid size={12} style={{ textAlign: 'center' }}>
         <ButtonGroup
@@ -32,7 +37,9 @@ function Counter({ initialValue, step }: CounterProps): JSX.Element {
           aria-label="outlined primary button group"
         >
           <Button onClick={() => setCounter(counter + step)}>Increment</Button>
-          <Button color='error' onClick={() => setCounter(counter - step)}>Decrement</Button>
+          <Button color="error" onClick={() => setCounter(counter - step)}>
+            Decrement
+          </Button>
         </ButtonGroup>
       </Grid>
       <Grid
