@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import { CounterProps } from '../types/counter';
 import NumberFact from './NumberFact';
+
+interface CounterProps {
+  initialValue: number;
+  step: number;
+}
 
 function counter(props: CounterProps) {
   const [counter, setCounter] = useState<number>(props.initialValue);
