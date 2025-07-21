@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { JSX, useEffect, useState } from 'react';
 import { getNumberFact } from '../api/NumbersApi';
 
-interface Props {
+interface NumberFactProps {
   value: number;
 }
 
-function NumberFact({ value }: Props) {
+function NumberFact({ value }: NumberFactProps): JSX.Element {
   const [fact, setFact] = useState<string>('Loading...');
 
   useEffect(() => {

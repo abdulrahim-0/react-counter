@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { JSX, useState } from 'react';
 import NumberFact from './NumberFact';
 
 interface CounterProps {
@@ -6,8 +6,8 @@ interface CounterProps {
   step: number;
 }
 
-function counter(props: CounterProps) {
-  const [counter, setCounter] = useState<number>(props.initialValue);
+function Counter({initialValue , step}: CounterProps): JSX.Element {
+  const [counter, setCounter] = useState<number>(initialValue);
   return (
     <div
       style={{
@@ -51,7 +51,7 @@ function counter(props: CounterProps) {
             boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
             transition: 'background-color 0.3s ease'
           }}
-          onClick={() => setCounter(counter + props.step)}
+          onClick={() => setCounter(counter + step)}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = '#1e40af')
           }
@@ -74,7 +74,7 @@ function counter(props: CounterProps) {
             boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
             transition: 'background-color 0.3s ease'
           }}
-          onClick={() => setCounter(counter - props.step)}
+          onClick={() => setCounter(counter - step)}
           onMouseOver={(e) =>
             (e.currentTarget.style.backgroundColor = '#991b1b')
           }
@@ -90,4 +90,4 @@ function counter(props: CounterProps) {
   );
 }
 
-export default counter;
+export default Counter;

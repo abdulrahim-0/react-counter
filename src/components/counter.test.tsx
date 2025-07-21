@@ -1,8 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Counter from './counter';
+import Counter from './Counter';
 
 describe('counter tests', () => {
-
   it('shows up correctly', () => {
     render(<Counter initialValue={0} step={1} />);
   });
@@ -15,7 +14,7 @@ describe('counter tests', () => {
     fireEvent.click(incrementButton);
     expect(counterDisplay).toHaveTextContent('1');
   });
-  
+
   it('decrements the counter', () => {
     render(<Counter initialValue={0} step={1} />);
     const decrementButton = screen.getByText('Decrement');
