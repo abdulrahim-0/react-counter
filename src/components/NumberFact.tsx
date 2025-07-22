@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getNumberFact } from '../api/NumbersApi';
+import './NumberFacts.css'; // Assuming you have some styles for the NumberFact component
 
 interface Props {
   value: number;
@@ -22,27 +23,8 @@ function NumberFact({ value }: Props) {
   }, [value]);
 
   return (
-    <div
-      style={{
-        background: '#23272f',
-        borderRadius: '8px',
-        padding: '16px',
-        marginTop: '16px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
-        maxWidth: '400px',
-      }}
-    >
-      <p
-        style={{
-          fontStyle: 'italic',
-          color: '#e0e0e0',
-          fontSize: '1.1rem',
-          margin: 0,
-          letterSpacing: '0.01em',
-        }}
-      >
-        {fact}
-      </p>
+    <div className="number-fact-container">
+      <p className="number-fact-text">{fact}</p>
     </div>
   );
 }
