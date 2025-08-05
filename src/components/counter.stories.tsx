@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import Counter from './counter';
+import Counter from './Counter';
 
 const meta = {
   component: Counter
